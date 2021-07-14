@@ -1,0 +1,32 @@
+{% load static i18n %}
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>{% block title %}{% translate "IMCTA" %}{% endblock title %}</title>
+    <link rel="icon" href="{% static 'img/favicon.ico' %}">
+
+    {% block css %}
+	  {% include 'css.html' %}
+    {% endblock %}
+
+
+    {% block javascript %}
+	  {% include 'js.html' %}
+    {% endblock javascript %}
+  </head>
+
+  <body>
+    {% block header %}
+	  {% include 'header.html' %}
+    {% endblock header %}
+
+    {% block content %}
+    {% endblock content %}
+
+    {% block footer %}
+	  {% include 'footer.html' %}
+    {% endblock footer %}
+  </body>
+</html>

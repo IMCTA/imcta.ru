@@ -1,0 +1,34 @@
+{% load i18n %}
+{% get_available_languages as languages %}
+<header id="header" class="fixed-top">
+<div class="container d-flex align-items-center">
+
+<h1 class="logo me-auto"><a href="/">{% translate "IMCTA" %}</a></h1>
+<!-- Uncomment below if you prefer to use an image logo -->
+<!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+<nav id="navbar" class="navbar order-last order-lg-0">
+<ul>
+  <li><a href="{% url 'landingpage:front' %}">{% translate "About us" %}</a></li>
+  <li><a href="#">{% translate "Tours" %}</a></li>
+  <li><a href="#">{% translate "Payment" %}</a></li>
+  <li><a href="#">{% translate "Contacts" %}</a></li>
+
+ <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle fw-bold" href="#" id="languageSelector" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+				  {{ LANGUAGE_CODE|upper }}
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+           {% for lang_code, lang_name in languages %}
+            {% language lang_code %}
+			<li><a class="dropdown-item" href="{% url 'landingpage:front' %}" alt="{{ lang_name }}" title="{{ lang_name }}">{{ lang_name }}</a></li>
+            {% endlanguage %}
+        {% endfor %}
+          </ul>
+        </li>
+</ul>
+<i class="bi bi-list mobile-nav-toggle"></i>
+</nav>
+
+</div>
+</header>
