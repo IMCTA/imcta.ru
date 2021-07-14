@@ -5,14 +5,13 @@ from django.contrib import admin
 from django.urls import include, path
 from django.views import defaults as default_views
 
-urlpatterns = (
-    i18n_patterns(
-        path("", include("landingpage.urls", namespace="landingpage")),
-        path(settings.ADMIN_URL, admin.site.urls),
-    )
-    + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-)
+urlpatterns = [
+    path(settings.ADMIN_URL, admin.site.urls),
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
+urlpatterns += i18n_patterns(
+    path("", include("landingpage.urls", namespace="landingpage")),
+)
 
 if settings.DEBUG:
     # This allows the error pages to be debugged during development, just visit
