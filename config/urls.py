@@ -10,7 +10,7 @@ urlpatterns = [
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 urlpatterns += i18n_patterns(
-    path("", include("landingpage.urls", namespace="landingpage")),
+    path("", include("frontpage.urls", namespace="frontpage")),
 )
 
 if settings.DEBUG:

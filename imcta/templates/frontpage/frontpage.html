@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% load static i18n %}
+
+{% block title %}{% translate "IMCTA" %}{% endblock %}
+
+{% block content %}
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex justify-content-center align-items-center">
+    <div class="container position-relative" data-aos="fade-up" data-aos-delay="0">
+			<h1>{{ frontpage_data.hero_header }}</h1>
+            <h2>{{ frontpage_data.hero_text }}</h2>
+      <a href="mailto:info@imcta.ru" class="btn-get-started">{% translate "Contact us" %}</a>
+    </div>
+  </section>
+  <!-- End Hero -->
+
+  <main id="main">
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+          <div class="col-lg-6 pt-4 order-2 order-lg-2" data-aos="fade-up" data-aos-delay="100">
+				  <img src="{{ frontpage_data.about_photo.url }}" class="img-fluid rounded" alt="">
+          </div>
+          <div class="col-lg-6 pt-lg-0 order-1 order-lg-1 content">
+				  <h3>{{ frontpage_data.about_header }}</h3>
+				  <p>{{ frontpage_data.about_text|safe|linebreaks }}</p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Why Us Section ======= -->
+    <section id="why-us" class="why-us">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+          <div class="col d-flex align-items-stretch">
+            <div class="content">
+					<h3>{{ frontpage_data.why_us_header }}</h3>
+				  <p>{{ frontpage_data.why_us_text|safe|linebreaks }}</p>
+            </div>
+          </div>
+
+      </div>
+    </section><!-- End Why Us Section -->
+
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+          <div class="col-lg-6 pt-lg-0 order-1 order-lg-2 content">
+				  {% if frontpage_data.more_info_header %}
+					<h3>{{ frontpage_data.more_info_header}}</h3>
+				  {% endif %}
+				  <p>{{ frontpage_data.more_info_text|safe|linebreaks }}</p>
+          </div>
+          <div class="col-lg-6 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="100">
+				  <img src="{{ frontpage_data.more_info_photo.url }}" class="img-fluid rounded" alt="">
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+
+
+  </main><!-- End #main -->
+
+{% endblock content %}

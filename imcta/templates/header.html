@@ -9,7 +9,7 @@
 
 <nav id="navbar" class="navbar order-last order-lg-0">
 <ul>
-  <li><a href="{% url 'landingpage:front' %}">{% translate "About us" %}</a></li>
+  <li><a href="{% url 'frontpage:front' %}">{% translate "About us" %}</a></li>
   <li><a href="#">{% translate "Tours" %}</a></li>
   <li><a href="#">{% translate "Payment" %}</a></li>
   <li><a href="#">{% translate "Contacts" %}</a></li>
@@ -21,7 +21,7 @@
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
            {% for lang_code, lang_name in languages %}
             {% language lang_code %}
-			<li><a class="dropdown-item" href="{% url 'landingpage:front' %}" alt="{{ lang_name }}" title="{{ lang_name }}">{{ lang_name }}</a></li>
+			<li><a class="dropdown-item" href="{% url 'frontpage:front' %}" alt="{{ lang_name }}" title="{{ lang_name }}">{{ lang_name }}</a></li>
             {% endlanguage %}
         {% endfor %}
           </ul>

@@ -72,11 +72,12 @@ THIRD_PARTY_APPS = [
     "allauth",
     "allauth.account",
     "allauth.socialaccount",
+    "solo",
 ]
 
 LOCAL_APPS = [
     "imcta.users.apps.UsersConfig",
-    "landingpage.apps.LandingpageConfig",
+    "frontpage.apps.FrontPageConfig",
     # Your stuff: custom apps go here
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps

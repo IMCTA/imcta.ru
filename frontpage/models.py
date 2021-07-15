@@ -1,8 +1,8 @@
 from django.db import models
-from model_utils.models import TimeStampedModel
+from solo.models import SingletonModel
 
 
-class LandingPage(TimeStampedModel):
+class FrontPage(SingletonModel):
     hero_header = models.CharField(max_length=127, verbose_name="Заголовок слайдера")
     hero_text = models.CharField(max_length=255, verbose_name="Текст слайдера")
     about_header = models.CharField(

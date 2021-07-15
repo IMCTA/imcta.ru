@@ -1,10 +1,10 @@
 from modeltranslation.translator import TranslationOptions, register
 
-from .models import LandingPage
+from .models import FrontPage
 
 
-@register(LandingPage)
-class LandingPageTranslationOptions(TranslationOptions):
+@register(FrontPage)
+class FrontPageTranslationOptions(TranslationOptions):
     fields = (
         "hero_header",
         "hero_text",
