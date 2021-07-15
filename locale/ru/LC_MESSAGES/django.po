@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-14 10:42+0300\n"
+"POT-Creation-Date: 2021-07-15 14:45+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,15 +20,15 @@ msgstr ""
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
 "%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: config/settings/base.py:277
+#: config/settings/base.py:283
 msgid "Russian"
 msgstr ""
 
-#: config/settings/base.py:278
+#: config/settings/base.py:284
 msgid "English"
 msgstr ""
 
-#: config/settings/base.py:279
+#: config/settings/base.py:285
 msgid "Chinese"
 msgstr ""
 
@@ -282,8 +282,9 @@ msgid ""
 "mail address</a>."
 msgstr ""
 
-#: imcta/templates/base.html:7 imcta/templates/header.html:5
-#: imcta/templates/landingpage/landingpage.html:4
+#: imcta/templates/base.html:7 imcta/templates/frontpage/frontpage.html:4
+#: imcta/templates/header.html:6 imcta/templates/landingpage/landingpage.html:4
+#: imcta/templates/tours/tour_list.html:4
 msgid "IMCTA"
 msgstr "АМСТ"
 
@@ -291,11 +292,16 @@ msgstr "АМСТ"
 msgid "Agency for Intermunicipal Cooperation and Tourism"
 msgstr "Агентство межмуниципального сотрудничества и туризма"
 
+#: imcta/templates/frontpage/frontpage.html:13
+#: imcta/templates/landingpage/landingpage.html:13
+msgid "Contact us"
+msgstr "Связаться с нами"
+
 #: imcta/templates/header.html:12
 msgid "About us"
 msgstr "О нас"
 
-#: imcta/templates/header.html:13
+#: imcta/templates/header.html:13 imcta/templates/tours/tour_list.html:10
 msgid "Tours"
 msgstr "Каталог туров"
 
@@ -306,10 +312,6 @@ msgstr "Оплата"
 #: imcta/templates/header.html:15
 msgid "Contacts"
 msgstr "Контакты"
-
-#: imcta/templates/landingpage/landingpage.html:13
-msgid "Contact us"
-msgstr "Связаться с нами"
 
 #: imcta/users/admin.py:18
 msgid "Personal info"

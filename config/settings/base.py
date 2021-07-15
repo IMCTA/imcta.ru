@@ -282,5 +282,5 @@ def gettext(s):
 LANGUAGES = (
     ("ru", gettext("Russian")),
     ("en", gettext("English")),
-    ("zh-cn", gettext("Chinese")),
+    ("zh-hans", gettext("Chinese")),
 )
