@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load static i18n %}
+
+{% block title %}{% translate "IMCTA" %}{% endblock %}
+
+{% block content %}
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs" data-aos="fade-in">
+      <div class="container">
+			  <h2>{% translate 'Tours' %}</h2>
+      </div>
+    </div>
+	<!-- End Breadcrumbs -->
+
+<section id="events" class="events">
+<div class="container" data-aos="fade-up">
+<div class="row">
+		{% for tour in tour_list %}
+  <div class="col-md-6 d-flex align-items-stretch">
+	<div class="card">
+	  <div class="card-img">
+			  <img class="rounded" src="{{ tour.thumbnail.url }}" alt="...">
+	  </div>
+	  <div class="card-body rounded">
+			  <h5 class="card-title"><a href="">{{ tour.title }}</a></h5>
+			  <p class="fst-italic text-center">{{ tour.date }}</p>
+			  <p class="card-text">{{ tour.announcement }}</p>
+	  </div>
+	</div>
+
+  </div>
+{% endfor %}
+</div>
+</div>
+</section>
+{% endblock content %}

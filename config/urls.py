@@ -11,6 +11,7 @@ urlpatterns = [
 
 urlpatterns += i18n_patterns(
     path("", include("frontpage.urls", namespace="frontpage")),
+    path("tours/", include("tours.urls", namespace="tours")),
 )
 
 if settings.DEBUG:
