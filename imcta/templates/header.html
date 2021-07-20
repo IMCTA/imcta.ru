@@ -1,4 +1,4 @@
-{% load i18n %}
+{% load i18n i18n_urls %}
 <header id="header" class="fixed-top">
 <div class="container d-flex align-items-center">
 
@@ -16,20 +16,15 @@
 </ul>
 <i class="bi bi-list mobile-nav-toggle"></i>
 </nav>
-<div class="mx-3">
-<form action="{% url 'set_language' %}" method="post">{% csrf_token %}
-    <input name="next" type="hidden" value="{{ redirect_to }}">
-    <select class="form-select" name="language" onchange="this.form.submit()" >
-        {% get_current_language as LANGUAGE_CODE %}
-        {% get_available_languages as LANGUAGES %}
-        {% get_language_info_list for LANGUAGES as languages %}
-        {% for language in languages %}
-            <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
-                {{ language.name_local|upper }}
-            </option>
-        {% endfor %}
-    </select>
-</form>
+<div class="dropdown mx-3">
+  <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+		  &#127760;
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    <li><a class="dropdown-item" href="{% change_lang 'ru' %}">RU</a></li>
+    <li><a class="dropdown-item" href="{% change_lang 'en' %}">EN</a></li>
+    <li><a class="dropdown-item" href="{% change_lang 'zh-hans' %}">CN</a></li>
+  </ul>
 </div>
 </div>
 </header>

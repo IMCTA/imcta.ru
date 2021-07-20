@@ -188,6 +188,9 @@ TEMPLATES = [
                 "django.contrib.messages.context_processors.messages",
                 "imcta.utils.context_processors.settings_context",
             ],
+            "libraries": {
+                "i18n_urls": "imcta.utils.i18n_urls",
+            },
         },
     }
 ]
